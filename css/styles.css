@@ -27,11 +27,14 @@ body {
 
 /* ______reset______ */
 .container {
-  display: flex;
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  align-items: center;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* -all list-(видаляє крапочки у списках) */
@@ -60,12 +63,12 @@ p {
 
 /* -logo- */
 .logo {
-  color: var(--bcg-focus-btn-color);
-
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
+
+  color: var(--bcg-focus-btn-color);
 }
 .logo-footer {
   color: var(--hero-btntext-color);
@@ -76,21 +79,22 @@ p {
 
 /* -section-title- */
 .section-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
-
-  margin-bottom: 50px;
 }
 
 /* ________header________ */
 .header {
-  width: 1600px;
-  margin: 0 auto;
   border-bottom: 1px solid #ececec;
 }
-
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -115,11 +119,11 @@ p {
 }
 
 .site-nav .link {
-  color: var(--title-nav-color);
-
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+
+  color: var(--title-nav-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -141,11 +145,11 @@ p {
 }
 
 .auth-nav .link {
-  color: var(--text-color);
-
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+
+  color: var(--text-color);
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -156,24 +160,29 @@ p {
 
 /* --hero-- */
 .hero {
-  width: 1600px;
+  /* width: 1600px; */
   margin: 0 auto;
-  padding: 200px 452px;
+  padding: 200px 0;
+
+  text-align: center;
 
   background-color: #2f303a;
-  text-align: center;
 }
 
 .hero-title {
-  color: var(--hero-btntext-color);
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  color: var(--hero-btntext-color);
 }
 
 .button {
@@ -181,15 +190,16 @@ p {
   border-radius: 4px;
   padding: 10px 32px;
 
-  color: var(--hero-btntext-color);
-  background-color: var(--bcg-focus-btn-color);
-
   font-size: 16px;
   line-height: calc(30 / 16);
   text-align: center;
   letter-spacing: 0.06em;
 
+  border: none;
   cursor: pointer;
+
+  color: var(--hero-btntext-color);
+  background-color: var(--bcg-focus-btn-color);
 }
 
 .button:hover,
@@ -212,11 +222,20 @@ p {
   margin: -1px;
 }
 
+.featur {
+  padding-bottom: 0px;
+}
+
 .features {
   display: flex;
   gap: 30px;
-  padding-top: 94px;
 }
+
+.features-item {
+  /* width: 270px; */
+  width: calc((100% - 30px * 3) / 4);
+}
+
 .features-title {
   margin-bottom: 10px;
 
@@ -233,11 +252,6 @@ p {
 
 /* --work-- */
 
-.work {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .section-title {
   margin-bottom: 50px;
 }
@@ -250,11 +264,6 @@ p {
 /* --team-- */
 
 .team {
-  width: 1600px;
-  margin: 0 auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
-
   background-color: var(--bcg-nofocus-btn);
 }
 
@@ -268,9 +277,11 @@ p {
   background-color: var(--hero-btntext-color);
 }
 
-.teams-imag {
+.teams-content {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
+
 .teams-title {
   margin-bottom: 10px;
 
@@ -281,8 +292,6 @@ p {
 }
 
 .teams-text {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
@@ -292,19 +301,17 @@ p {
 
 /* ________footer________ */
 .footer {
-  width: 1600px;
   margin: 0 auto;
-
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 215px;
 
   background-color: #2f303a;
 }
 
-.footer-list {
+address {
   margin-top: 20px;
 }
+
 .footer-list .address-link {
   color: var(--hero-btntext-color);
 
@@ -336,9 +343,9 @@ p {
 /* _______portfolio_______ */
 
 .portfolio-container {
-  flex-direction: column;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /* flex-direction: column; */
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
 }
 
 /* --filter-btn-- */
@@ -346,7 +353,7 @@ p {
 .filters {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   gap: 8px;
 }
 
@@ -358,6 +365,7 @@ p {
   line-height: calc(26 / 16);
   letter-spacing: 0.03em;
   font-family: inherit;
+  border: none;
 
   height: 38px;
   border-radius: 4px;
@@ -384,6 +392,8 @@ p {
 }
 
 .projects-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
