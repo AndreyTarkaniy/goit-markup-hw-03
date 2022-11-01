@@ -278,8 +278,8 @@ p {
 }
 
 .teams-content {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .teams-title {
@@ -312,7 +312,7 @@ address {
   margin-top: 20px;
 }
 
-.footer-list .address-link {
+.address-link {
   color: var(--hero-btntext-color);
 
   line-height: calc(24 / 14);
@@ -320,18 +320,15 @@ address {
 }
 .footer-list .link {
   color: var(--footer-link-color);
-
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 
   text-decoration: none;
+  font-style: normal;
 }
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--bcg-focus-btn-color);
-}
-.footer-list {
-  font-style: normal;
 }
 .footer-list-item {
   margin-bottom: 9px;
@@ -341,12 +338,6 @@ address {
 }
 
 /* _______portfolio_______ */
-
-.portfolio-container {
-  /* flex-direction: column; */
-  /* padding-top: 94px;
-  padding-bottom: 94px; */
-}
 
 /* --filter-btn-- */
 
